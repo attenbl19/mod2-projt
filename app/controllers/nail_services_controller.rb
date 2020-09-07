@@ -1,0 +1,2 @@
+class NailServicesController < ApplicationController
+end
