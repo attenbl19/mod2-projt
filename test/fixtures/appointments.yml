@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: one
+  nail_technician: one
+  day: MyString
+  time: 1
+
+two:
+  client: two
+  nail_technician: two
+  day: MyString
+  time: 1

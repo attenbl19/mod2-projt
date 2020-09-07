@@ -1,0 +1,2 @@
+class NailTechnician < ApplicationRecord
+end
