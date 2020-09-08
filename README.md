@@ -22,6 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-hello world
-hello hello - bella
+
 bye world

@@ -2,10 +2,11 @@ class CreateClients < ActiveRecord::Migration[6.0]
   def change
     create_table :clients do |t|
       t.string :username
-      t.password_digest :password
+      t.string :password_digest
       t.string :email
-      t.integer :phone_number
-
+      t.string :phone_number
+      t.integer :store_id
+      
       t.timestamps
     end
   end

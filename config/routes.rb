@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   resources :stores
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
- get "/nail_services", to: "nail_services#index", as: "nail_services"
- get "/nail_services/:id", to: "nail_services#show", as: "nail_service" 
+#  get "/nail_services", to: "nail_services#index", as: "nail_services"
+#  get "/nail_services/:id", to: "nail_services#show", as: "nail_service" 
 
- get "/nail_technicians", to: "nail_technicians#index", as: "nail_technicians"
- get "/nail_technicians/:id", to: "nail_technicians#show", as: "nail_technician"
+#  get "/nail_technicians", to: "nail_technicians#index", as: "nail_technicians"
+#  get "/nail_technicians/:id", to: "nail_technicians#show", as: "nail_technician"
 
 end
