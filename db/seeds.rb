@@ -22,16 +22,6 @@ NailTechnician.destroy_all
 # #for phone numbers
 # Faker::PhoneNumber.phone_number
 
-# create_table "appointments", force: :cascade do |t|
-#     t.integer "client_id", null: false
-#     t.integer "nail_technician_id", null: false
-#     t.string "day"
-#     t.string "time"
-#     t.datetime "created_at", precision: 6, null: false
-#     t.datetime "updated_at", precision: 6, null: false
-#     t.index ["client_id"], name: "index_appointments_on_client_id"
-#     t.index ["nail_technician_id"], name: "index_appointments_on_nail_technician_id"
-
 store1 = Store.create(name: "Silver Salon", address: "220 E 52nd", phone_number: "(646)222-3456", store_hours: "9am-7pm")
 client1 = Client.create(username: "bella", password: "abc123", email: "bella04@yahoo.com", phone_number: "(415)941-8101", store_id: store1.id)
 nailtech1 = NailTechnician.create(name: "Annie", skill_set: "full", store_id: store1.id)
