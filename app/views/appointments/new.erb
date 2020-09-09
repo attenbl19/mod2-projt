@@ -3,12 +3,18 @@
 <h2>Please complete the form below</h2>
 <br>
 <hr>
-<%= form_for @appoinment do |f| %>
+<%= form_for (@appointment) do |f| %>
     <h3> <%= f.label :client_id, "Client:" %> </h3>
-    <%= f.collection_select :client_id, @client, :id, :username %> <br>
+    <%= f.collection_select :client_id, @clients, :id, :username %> <br>
     <br>
     <h3><%= f.label :nail_technician_id, "Nail Technician: " %></h3>
-    <%= f.collection_select :nail_technician_id, @nail_technician, :id, :name %> <br>
+    <%= f.collection_select :nail_technician_id, @nail_technicians, :id, :name %> <br>
+    <br>
+    <h3><%= f.label :day, "Day:" %></h3>
+    <%= f.collection_select :day, Appointment.all, :id, :day%><br>
+    <br>
+    <h3><%= f.label :time, "Time:" %></h3>
+    <%= f.collection_select :time, Appointment.all, :id, :time%><br>
     <br>
     <%= f.submit "Confirm your appointment!" %>
 <% end %>

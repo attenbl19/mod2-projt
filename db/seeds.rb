@@ -51,21 +51,21 @@ nail_tech_5= NailTechnician.create(name: Faker::Name.name, skill_set: "pedicures
 
 
 #creating appointments
-appointment_1 = Appointment.create(client: client_5, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_2 = Appointment.create(client: client_8, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_3 = Appointment.create(client: client_1, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_4 = Appointment.create(client: client_13, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_5 = Appointment.create(client: client_6, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_6 = Appointment.create(client: client_2, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_7 = Appointment.create(client: client_11, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_8 = Appointment.create(client: client_15, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_9 = Appointment.create(client: client_3, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_10 = Appointment.create(client: client_7, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_11 = Appointment.create(client: client_14, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_12 = Appointment.create(client: client_10, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_13 = Appointment.create(client: client_4, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_14 = Appointment.create(client: client_9, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
-appointment_15 = Appointment.create(client: client_12, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :all))
+appointment_1 = Appointment.create(client: client_5, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_2 = Appointment.create(client: client_8, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_3 = Appointment.create(client: client_1, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_4 = Appointment.create(client: client_13, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_5 = Appointment.create(client: client_6, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_6 = Appointment.create(client: client_2, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_7 = Appointment.create(client: client_11, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_8 = Appointment.create(client: client_15, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_9 = Appointment.create(client: client_3, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_10 = Appointment.create(client: client_7, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_11 = Appointment.create(client: client_14, nail_technician: nail_tech_2, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_12 = Appointment.create(client: client_10, nail_technician: nail_tech_4, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_13 = Appointment.create(client: client_4, nail_technician: nail_tech_1, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_14 = Appointment.create(client: client_9, nail_technician: nail_tech_5, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
+appointment_15 = Appointment.create(client: client_12, nail_technician: nail_tech_3, day: Faker::Date.forward(days: 21), time: Faker::Time.forward(days: 21, period: :morning, format: :short))
 
 
 

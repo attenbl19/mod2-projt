@@ -2,28 +2,28 @@ class ClientsController < ApplicationController
 
 
     def index
-        @client = Dog.all
+        @clients = Client.all
     end
 
     def new
-        @client = Dog.new
+        @client = Client.new
     end
 
     def create
-        @client = Dog.create(dog_params)
+        @client = Client.create(dog_params)
         redirect_to dog_path(@dog)
     end
 
     def show
         # byebug
-        @client = Dog.find(params[:id])
+        @client = Client.find(params[:id])
     end
 
 
     def edit
         
         #we have this 
-        @client = Dog.find(params[:id]) 
+        @client = Client.find(params[:id]) 
         @nail_services = @client.nail_services
 
     end
