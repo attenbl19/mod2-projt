@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+
     # if logged_in?
     #     @stores = @current_user.stores
     #   else
@@ -11,6 +12,10 @@ class StoresController < ApplicationController
     #   else
     #     @songs = Song.all # or force a login
     #   end
+ 
     def index
+        @store = Store.all
     end
+
+
 end

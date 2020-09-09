@@ -1,6 +1,5 @@
 class ClientsController < ApplicationController
 
-
     def index
         @client = Dog.all
     end
@@ -60,4 +59,5 @@ class ClientsController < ApplicationController
         params.require(:client).permit(:username, :password, :email, :phone_num)
     end
 end
+
 end

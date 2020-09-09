@@ -3,6 +3,7 @@ class CreateNailTechnicians < ActiveRecord::Migration[6.0]
     create_table :nail_technicians do |t|
       t.string :name
       t.string :skill_set
+      t.integer :store_id
 
       t.timestamps
     end
