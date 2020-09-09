@@ -1,28 +1,28 @@
 class ClientsController < ApplicationController
 
     def index
-        @client = Dog.all
+        @client = Client.all
     end
 
     def new
-        @client = Dog.new
+        @client = Client.new
     end
 
     def create
-        @client = Dog.create(dog_params)
-        redirect_to dog_path(@dog)
+        @client = Client.create(client_params)
+        redirect_to client_path(@client)
     end
 
     def show
         # byebug
-        @client = Dog.find(params[:id])
+        @client = Client.find(params[:id])
     end
 
 
     def edit
         
         #we have this 
-        @client = Dog.find(params[:id]) 
+        @client = Client.find(params[:id]) 
         @nail_services = @client.nail_services
 
     end
@@ -49,15 +49,11 @@ class ClientsController < ApplicationController
 
     end
 
-
-
-
     private
 
 
     def client_params
         params.require(:client).permit(:username, :password, :email, :phone_num)
     end
-end
 
 end

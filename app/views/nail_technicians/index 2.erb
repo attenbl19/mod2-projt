@@ -1,0 +1,5 @@
+<h1>Hello</h1>
+
+<% @nail_technicians.each do |nailtech| %>
+    <%= button_to nailtech.name, nailtech_path(nailtech) %>
+<% end %>
