@@ -14,6 +14,11 @@ NailService.destroy_all
 NailTechnician.destroy_all
 Store.destroy_all
 
+Appointment.reset_pk_sequence
+Client.reset_pk_sequence
+NailService.reset_pk_sequence
+NailTechnician.reset_pk_sequence
+Store.reset_pk_sequence
 
 
 #creating clients
@@ -65,13 +70,11 @@ appointment_15 = Appointment.create(client: client_12, nail_technician: nail_tec
 
 
  #creating services
- manicures = NailService.create(nail_service_type: "manicures")
- pedicures = NailService.create(nail_service_type: "pedicures")
- nail_design = NailService.create(nail_service_type: "nail design")
- gel = NailService.create(nail_service_type: "gel")
- fill_ins = NailService.create(nail_service_type: "fill ins")
-
- 
+ nail_srvc_1 = NailService.create(nail_service_type: "manicures", nail_technician: nail_tech_1)
+ nail_srvc_2 = NailService.create(nail_service_type: "pedicures", nail_technician: nail_tech_2)
+ nail_srvc_3 = NailService.create(nail_service_type: "nail design", nail_technician: nail_tech_3)
+ nail_srvc_4 = NailService.create(nail_service_type: "gel", nail_technician: nail_tech_4)
+ nail_srvc_5 = NailService.create(nail_service_type: "fill ins", nail_technician: nail_tech_5)
 
  #creating store
  bellas_nail_salon = Store.create(name: "Bella's Nail Salon", address: "123 Bellmont Drive", phone_number: "(917) 123 - 5555", store_hours: "9 to 5")

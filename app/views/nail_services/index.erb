@@ -1,6 +1,12 @@
 <h1>Salon Services</h1>
+<hr>
+<br>
+
 
 <% @nail_services.each do |nail_service|%>
-<%= nail_service.nail_service_type%>
-<%= nail_service.nail_tech%>
+<ul>
+<li>
+<%= link_to nail_service.nail_service_type, @nail_techincian %>
+</li>
+</ul>
 <%end%>
