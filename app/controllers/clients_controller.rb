@@ -20,12 +20,10 @@ class ClientsController < ApplicationController
     end
 
 
-    def edit
-        
+    def edit 
         #we have this 
         @client = Client.find(params[:id]) 
         @nail_services = @client.nail_services
-
     end
 
 
@@ -34,8 +32,6 @@ class ClientsController < ApplicationController
         @client = Client.find(params[:id])
         @client.update(client_params)
         redirect_to client_path(@client)
-
-
     end
 
 
@@ -47,17 +43,14 @@ class ClientsController < ApplicationController
         @client.destroy
         
         redirect_to clients_path
-
     end
-
-
 
 
     private
 
 
-    def client_params
-        params.require(:client).permit(:username, :password, :email, :phone_num)
-    end
-end
+        def client_params
+            params.require(:client).permit(:username, :password, :email, :phone_num)
+        end
+
 end

@@ -14,9 +14,10 @@ class AppointmentsController < ApplicationController
 
 
     def create
-        @appoinment = Appoinment.create(appointment_params)
-        if appointment.valid?
-            appointment.store
+        #byebug
+        @appointment = Appointment.create(appointment_params)
+        if @appointment.valid?
+            redirect_to @appointment.client
         else
             redirect_to new_appointment_path 
         end
@@ -24,14 +25,17 @@ class AppointmentsController < ApplicationController
 
     def show
         # digesting the request: finding an appointment in a model
-        @appointment = Appoinment.find(params[:id])
+        @appointment = Appointment.find(params[:id])
             
     end
 
 
 
     private
+    def appointment_params
 
-    appointment_params = params.require(:appointment).permit(:client_id, :nail_technician_id, :day, :time)
+        appointment_params = params.require(:appointment).permit(:client_id, :nail_technician_id, :day, :time)
+
+    end
 
 end
