@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   # resources :stores
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  get "signup", to: "users#new", as: "signup"
-  get "login", to: "sessions#new", as: "login"
-  post "sessions", to: "sessions#create", as: "sessions"
+  # get "signup", to: "users#new", as: "signup"
+  # get "login", to: "sessions#new", as: "login"
+  # post "sessions", to: "sessions#create", as: "sessions"
 
   get "/nail_services", to: "nail_services#index", as: "nail_services"
   get "/nail_services/:id", to: "nail_services#show", as: "nail_service" 
