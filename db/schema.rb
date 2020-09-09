@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_021553) do
     t.integer "nail_technician_id", null: false
     t.string "day"
     t.integer "time"
-    t.string "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_appointments_on_client_id"
@@ -29,10 +28,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_021553) do
     t.string "password"
     t.string "email"
     t.integer "phone_number"
-    t.string "password_digest"
-    t.string "email"
-    t.string "phone_number"
-    t.integer "store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_021553) do
   create_table "nail_services", force: :cascade do |t|
     t.integer "nail_technician_id", null: false
     t.string "nail_service_type"
-    t.string "type_of_service"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["nail_technician_id"], name: "index_nail_services_on_nail_technician_id"
@@ -49,7 +43,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_021553) do
   create_table "nail_technicians", force: :cascade do |t|
     t.string "name"
     t.string "skill_set"
-    t.integer "store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -59,8 +52,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_021553) do
     t.string "address"
     t.integer "phone_number"
     t.integer "store_hours"
-    t.string "phone_number"
-    t.string "store_hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
