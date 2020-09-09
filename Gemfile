@@ -55,3 +55,5 @@ end
 
 gem 'faker', '~> 2.13'
 
+gem 'activerecord-reset-pk-sequence', '~> 0.2.1'
+
