@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   get "/nail_technicians", to: "nail_technicians#index", as: "nail_technicians"
   get "/nail_technicians/:id", to: "nail_technicians#show", as: "nail_technician"
 
- 
-
+  get "/appointments", to: "appointments#index", as: "appointments"
+  get "/appointments/new", to: "appointments#new", as: "new_appointment"
+  post "/appointments", to: "appointments#create"
+  get "/appointments/:id", to: "appointment#show", as: "appointment"
+  get "appointments/:id/edit", to: "appointments#edit", as: "edit_appointment"
+  patch "/appointment/id", to: "appointment#update"
+  delete "/appointment/id", to: "appointment#destroy"
 end

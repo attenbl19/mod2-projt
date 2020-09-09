@@ -6,7 +6,7 @@
 <% @nail_services.each do |nail_service|%>
 <ul>
 <li>
-<%= link_to nail_service.nail_service_type, @nail_techincian %>
+<%= link_to nail_service.nail_service_type, nail_service_path(nail_service) %>
 </li>
 </ul>
 <%end%>

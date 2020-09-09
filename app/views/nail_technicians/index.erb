@@ -1,1 +1,13 @@
 <h1>Here are our highly experienced Technicians</h1>
+
+<hr>
+<br>
+
+
+<% @nail_technicians.each do |nail_technician|%>
+<ul>
+<li>
+<%= link_to nail_technician.name, nail_technician_path(nail_technician) %>
+</li>
+</ul>
+<%end%>

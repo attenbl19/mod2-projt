@@ -1,0 +1,14 @@
+<h1>Make an Appointment Today!</h1>
+<br>
+<h2>Please complete the form below</h2>
+<br>
+<hr>
+<%= form_for @appoinment do |f| %>
+    <h3> <%= f.label :client_id, "Client:" %> </h3>
+    <%= f.collection_select :client_id, @client, :id, :username %> <br>
+    <br>
+    <h3><%= f.label :nail_technician_id, "Nail Technician: " %></h3>
+    <%= f.collection_select :nail_technician_id, @nail_technician, :id, :name %> <br>
+    <br>
+    <%= f.submit "Confirm your appointment!" %>
+<% end %>

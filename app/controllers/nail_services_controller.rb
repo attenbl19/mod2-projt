@@ -1,7 +1,7 @@
 class NailServicesController < ApplicationController
 
     def index
-        @nail_service = NailService.all
+        @nail_services = NailService.all
     end
 
     def show
