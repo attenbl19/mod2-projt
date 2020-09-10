@@ -1,0 +1,94 @@
+
+<body>
+  <div class="container">
+  <h2>Sign In</h2>
+  
+  <form class="form-inline">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  </form>
+</div>
+  <% @stores.each do |store|%>
+<%= link_to store.name, store_path(store) %>
+<%end%>
+
+
+<style>
+.jumbotron {
+  background-color: pink;
+  color: #ffffff;
+  padding: 100px 25px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+  background-color: #ffe6f7; 
+  padding: 100px 25px;
+}
+
+ 
+  
+  </style>
+
+  
+
+
+
+ <div class="jumbotron text-center">
+    <h1>Welcome to Nailtopia</h1>
+    <p>We specialize in crafting beautiful nails</p>
+    <form class="form-inline">
+    <div class="input-group">
+    </div>
+    </div>
+   </form>
+</div>
+
+    
+  <div class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+     
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+

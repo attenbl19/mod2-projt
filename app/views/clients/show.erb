@@ -1,0 +1,16 @@
+<h2>Your appointment has been confirmed!</h2>
+
+<% Client.find do |client| %>
+<h3>Appointment Confirmation: </h3><%= @client.appointments.last.day%></h3>
+
+ <%#link_to "Appointment Confirmation", client_path(id: client.id)%>
+ 
+<%end%>
+
+
+
+
+
+
+
+

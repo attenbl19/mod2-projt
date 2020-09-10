@@ -14,7 +14,12 @@ class StoresController < ApplicationController
     #   end
  
     def index
+
         @store = Store.all
+    end
+
+    def show
+        
     end
 
 

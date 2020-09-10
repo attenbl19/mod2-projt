@@ -1,37 +1,46 @@
 class AppointmentsController < ApplicationController
 
+    # def index
+    #     @appoinments = Appoinment.all
+    # end
+
+
     def index
-        @appoinments = Appoinment.all
+        @ppointments = Appointment.all
     end
 
     def new
-        @appoinments = Appoinment.new
+        @appointment = Appointment.new
         @clients = Client.all
-        @nts = NailTechnician.all
+        @nail_technicians = NailTechnician.all
     end
 
-    def create
-        
-         byebug
+    
 
-        @appoinment = Appoinment.create(appointment_params)
-        # OR
-        # appoinment.create(client_id: params[:appoinment][:client_id], nail_technician_id: params[:client][:nail_technician_id])
-        
-        # redirect_to dog_path(@daycare.dog)
-        redirect_to @appoinment.client
+
+    def create
+        #byebug
+        @appointment = Appointment.create(appointment_params)
+        if @appointment.valid?
+            redirect_to @appointment.client
+        else
+            redirect_to new_appointment_path 
+        end
     end
 
     def show
-        # digesting the request: finding a appointment in a model
-        @appointment = Appoinment.find(params[:id])
+        # digesting the request: finding an appointment in a model
+        @appointment = Appointment.find(params[:id])
             
     end
 
 
 
     private
+    def appointment_params
 
-    appointment_params = params.require(:appoinment).permit(:client_id, :nail_technician_id, :day, :time)
+        appointment_params = params.require(:appointment).permit(:client_id, :nail_technician_id, :day, :time)
+
+    end
 
 end

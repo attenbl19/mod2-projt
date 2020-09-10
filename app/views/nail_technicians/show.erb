@@ -1,5 +1,37 @@
-<h2><%= @nail_technician.name%></h2>
-<hr>
-<h3>Skill Set: <%= @nail_technician.skill_set%></h3>
 
-<p><%=button_to "appoinment", appointments_path(@appoinment), method: :get%></p>
+<style>
+.jumbotron {
+  background-color: rgb(204, 255, 230);	
+  color: #0000ff;
+  padding: 100px 25px;
+}
+</style>
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, It's Nice to Meet You!</h1>
+    <br>
+    <h2 class="display-6">My name is, <%= @nail_technician.name%></h2>
+    <hr class="my-4">
+    <h3>Skill Set: <%= @nail_technician.skill_set%></h3>
+    <br>
+    <h3 class="display-6">While you're here, checkout our Services or make an appointment below</h3> 
+    <br>
+    <p>Click on the service to learn more</p>
+    <br>
+    <% NailService.all.each do |nail_service|%>
+            
+    <ul>
+    <li>
+    <h4></h4><%= link_to nail_service.nail_service_type, nail_service_path(nail_service) %></h4>
+    </li>
+    </ul>
+  <%end%>
+</div>
+
+        <%# Appointment.all.each do| appointment|%>
+        <%= link_to @appointments, appointments_path %>
+        
+ 
+  
+  

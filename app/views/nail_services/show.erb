@@ -1,6 +1,6 @@
 <h1>Name: <%= @nail_service.nail_service_type %> </h1>
-<p>Nail Technician: <%= @nail_service.nts %> </p>
+<!--<p>Nail Technician: <%= @nail_service.nail_technician %> </p> -->
 
-<%  @nail_service.nts.each do |nail_tech| %>
-    <li><%= link_to nail_tech.name, nail_tech_path(nail_tech)%></li>
+<%  NailTechnician.all.each do |nail_tech| %>
+    <li><%= link_to nail_tech.name, nail_technician_path(nail_tech)%></li>
 <%end%>
