@@ -10,8 +10,8 @@ class ClientsController < ApplicationController
     end
 
     def create
-        @client = Client.create(dog_params)
-        redirect_to dog_path(@dog)
+        @client = Client.create(client_params)
+        redirect_to client_path(@client)
     end
 
     def show

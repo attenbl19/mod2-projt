@@ -1,0 +1,30 @@
+<style>
+.jumbotron {
+  background-color: rgb(217, 204, 255);	
+  color: #ffffff;
+  padding: 100px 25px;
+}
+</style>
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Salon Information</h1>
+  
+  <p class="lead">Address: 123 East 52 Street, NY, NY</p>
+  <p class="lead">Phone Number: 555 - 555 - 5555</p>
+  <p class="lead">Hours of Operation: 10 am t0 7 pm</p>
+  <h2>Meet our Wonder Staff! - Just click on a name to learn more about our technicians</h2>
+  <hr class="my-4">
+  <p>We are open Monday - Friday and some holidays!  </p>
+
+  <% NailTechnician.all.each do |nail_technician|%>
+<ul>
+<li>
+<%= link_to nail_technician.name, nail_technician_path(nail_technician) %>
+</li>
+</ul>
+<%end%>
+  
+</div>
+

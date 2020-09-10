@@ -12,6 +12,10 @@ class StoresController < ApplicationController
     #     @songs = Song.all # or force a login
     #   end
     def index
-        @store = Stores.all
+        @stores = Store.all
+    end
+
+    def show
+        
     end
 end

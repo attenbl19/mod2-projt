@@ -77,7 +77,7 @@ appointment_15 = Appointment.create(client: client_12, nail_technician: nail_tec
  nail_srvc_5 = NailService.create(nail_service_type: "fill ins", nail_technician: nail_tech_5)
 
  #creating store
- bellas_nail_salon = Store.create(name: "Bella's Nail Salon", address: "123 Bellmont Drive", phone_number: "(917) 123 - 5555", store_hours: "9 to 5")
+ bellas_nail_salon = Store.create(name: "Nailtopica", address: "123 Bellmont Drive", phone_number: "(917) 123 - 5555", store_hours: "9 to 5")
 
 
 

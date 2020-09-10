@@ -3,9 +3,12 @@ class AppointmentsController < ApplicationController
     #     @appoinments = Appoinment.all
     # end
 
+    def index
+        @ppointments = Appointment.all
+    end
+
     def new
         @appointment = Appointment.new
-        @ppointments = Appointment.all
         @clients = Client.all
         @nail_technicians = NailTechnician.all
     end

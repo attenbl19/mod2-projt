@@ -1,0 +1,6 @@
+<%= form_for @client do |f| %>
+    <h3><%= f.label :appointments, "Appointment: " %></h3>
+    <%= f.collection_select :appointments, @appointments, :id, :name %> <br>
+    <br>
+    <%= f.submit "Delete this activity!" %>
+<% end %>
