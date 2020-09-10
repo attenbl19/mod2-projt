@@ -27,10 +27,14 @@
     </li>
     </ul>
   <%end%>
+      <%@nail_technician.appointments.map do |app|%>
+      <%=app.client.username%>
+      <%=app.day%>
+      <%=app.time%>
+      <%end%>
 </div>
 
-        <%# Appointment.all.each do| appointment|%>
-        <%= link_to @appointments, appointments_path %>
+        
         
  
   

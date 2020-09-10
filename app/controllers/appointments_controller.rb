@@ -6,7 +6,7 @@ class AppointmentsController < ApplicationController
 
 
     def index
-        @ppointments = Appointment.all
+        @appointments = Appointment.all
     end
 
     def new
