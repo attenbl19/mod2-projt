@@ -20,6 +20,7 @@
     <p>Click on the service to learn more</p>
     <br>
     <% NailService.all.each do |nail_service|%>
+            
     <ul>
     <li>
     <h4></h4><%= link_to nail_service.nail_service_type, nail_service_path(nail_service) %></h4>
