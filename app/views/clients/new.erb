@@ -1,1 +1,16 @@
 
+<%= form_for @client do |f| %>
+    <h3><%= f.label :email %></h3>
+    <%= f.text_field :email %><br>
+    <br>
+    <h3><%= f.label :day %></h3>
+    <%= f.text_field :day %><br>
+    <br>
+    h3><%= f.label :time %></h3>
+    <%= f.text_field :time %><br>
+    <%= f.submit %>
+    <br>
+    <br>
+<% end%>
+
+<%= button_to("Home", dogs_path, method: :get) %><br>
