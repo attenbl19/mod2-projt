@@ -1,12 +1,7 @@
 class AppointmentsController < ApplicationController
 
-    # def index
-    #     @appoinments = Appoinment.all
-    # end
-
-
     def index
-        @ppointments = Appointment.all
+        @appointments = Appointment.all
     end
 
     def new
@@ -14,8 +9,6 @@ class AppointmentsController < ApplicationController
         @clients = Client.all
         @nail_technicians = NailTechnician.all
     end
-
-    
 
 
     def create
@@ -33,6 +26,17 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.find(params[:id])
             
     end
+
+
+
+    private
+    def appointment_params
+
+        appointment_params = params.require(:appointment).permit(:client_id, :nail_technician_id, :day, :time)
+
+    end
+
+end
 
 
 

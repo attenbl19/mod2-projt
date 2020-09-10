@@ -53,4 +53,3 @@ class ClientsController < ApplicationController
         params.require(:client).permit(:username, :password, :email, :phone_num)
     end
 end
-
